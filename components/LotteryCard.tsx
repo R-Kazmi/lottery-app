@@ -66,7 +66,7 @@ function LotteryCard({ lotteryType }: { lotteryType: string }) {
 
   return (
     <main className={`bg-${lotteryType}Light rounded-lg pt-[1rem] w-[22rem]`}>
-      <div className="bg-cosmicLight bg-atomicLight bg-classicLight text-cosmic text-classic text-atomic"></div>
+      <div className="bg-cosmicLight bg-atomicLight bg-classicLight text-cosmic text-classic text-atomic bg-atomic bg-classic bg-cosmic"></div>
       {data ? (
         <>
           {/* title */}
