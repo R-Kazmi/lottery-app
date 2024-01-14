@@ -15,7 +15,7 @@ function LotteryCard({ lotteryType }: { lotteryType: string }) {
   // local state
   const [lastFive, setLastFive] = useState<boolean>(false);
   const [dropdown, setDropdown] = useState<boolean>(false);
-  const [data, setData] = useState(null);
+const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     const fetchData = async () => {
