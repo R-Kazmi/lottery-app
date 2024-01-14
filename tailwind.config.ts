@@ -8,13 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        cosmic: "#961A88",
+        cosmicLight: "#EEE1F0",
+        classic: "#191978",
+        classicLight: "#E9EEF6",
+        atomic: "#00AEB1",
+        atomicLight: "#EAF9F7",
       },
+      fontFamily: {
+        nova: ["Ibarra Real Nova", "serif"],
+      }
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }
 export default config
