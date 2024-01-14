@@ -15,8 +15,9 @@ function LotteryCard({ lotteryType }: { lotteryType: string }) {
   // local state
   const [lastFive, setLastFive] = useState<boolean>(false);
   const [dropdown, setDropdown] = useState<boolean>(false);
-const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(null);
 
+  //   api call
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,9 +34,7 @@ const [data, setData] = useState<any>(null);
     fetchData();
   }, []);
 
-  console.log(data);
-
-  //   last five results
+  //   last five results (actual data was not in api so put dummy data)
   const LastFive = () => {
     return (
       <table className="w-full">
@@ -54,6 +53,7 @@ const [data, setData] = useState<any>(null);
     );
   };
 
+  //   convert hours to time
   function convertHoursToTime(number: number): string {
     const hours = Math.floor(number / 60);
     const minutes = number % 60;
@@ -66,6 +66,7 @@ const [data, setData] = useState<any>(null);
 
   return (
     <main className={`bg-${lotteryType}Light rounded-lg pt-[1rem] w-[22rem]`}>
+      <div className="bg-cosmicLight bg-atomicLight bg-classicLight text-cosmic text-classic text-atomic"></div>
       {data ? (
         <>
           {/* title */}
